@@ -1,0 +1,401 @@
+<!DOCTYPE html> 
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Erleben Sie spannende Sportwetten mit echtem Geld und die besten Promotionen bei Bwin. Ihre Plattform für unkomplizierte Sportwetten.">
+        <link rel="canonical" href="https://www.bwin.com/promotions">
+        <meta name="keywords" content="Bwin, Sportwetten, echtes Geld, Sport Promotionen, einfache Sportwetten">
+        <title>Bwin | Aktionen | Sportwetten mit echtem Geld leicht gemacht</title>
+        <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="Home">
+            <div class="container">
+                <div class="HomeFlex">
+                    <div class="Home_img">
+                        <a href="/">
+                            <img src="images/bwin-logo.svg">
+                        </a>
+                    </div>
+                    <div class="Home_btn">
+                        <a href="#">
+                            <button type="button" class="toggle-register-btn js-login-open button-primary login-menu__register" data-popup-trigger="register">Registrieren</button>
+                        </a>
+                        <a href="#">
+                            <button id="loginButton" type="button" class="button-primary-green login-menu__login js-login-open log" data-popup-trigger="login">Anmelden</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="login-form-container">
+                <div class="login-form">
+                    <button class="close-btn">&times;</button>
+                    <div class="log-img">
+                        <img src="images/bwin-logo.svg" alt="Logo">
+                    </div>
+                    <input type="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" class="log-input">
+                    <input type="password" placeholder="Geben Sie Ihr Passwort ein" class="log-input">
+                    <button class="login-btn">Anmelden</button>
+                    <a href="#" class="forgot-password">Passwort vergessen?</a>
+                </div>
+            </div>
+            <div class="register-form-container">
+                <div class="register-form">
+                    <button class="close-btn">&times;</button>
+                    <div class="log-img">
+                        <img src="images/bwin-logo.svg" alt="Logo">
+                    </div>
+                    <input type="email" class="log-input" placeholder="Geben Sie Ihre E-Mail-Adresse ein">
+                    <input type="password" class="log-input" placeholder="Geben Sie Ihr Passwort ein">
+                    <input type="password" class="log-input" placeholder="Bestätigen Sie Ihr Passwort">
+                    <button class="register-btn">Registrieren</button>
+                    <button class="toggle-login-btn">Sie haben bereits ein Konto? Anmelden</button>
+                </div>
+            </div>
+            <div class="forgot-password-form-container">
+                <div class="forgot-password-form">
+                    <button class="close-btn">&times;</button>
+                    <div class="log-img">
+                        <img src="images/bwin-logo.svg" alt="Logo">
+                    </div>
+                    <p class="forgot-password-instructions">Geben Sie Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen.</p>
+                    <input type="email" placeholder="Geben Sie Ihre E-Mail-Adresse ein" class="log-input">
+                    <button class="forgot-password-btn">Link zum Zurücksetzen senden</button>
+                    <button class="back-to-login-btn">Zurück zur Anmeldung</button>
+                </div>
+            </div>
+            <div class="popup-message">
+                <p>Ein Autorisierungslink wurde gesendet!</p>
+            </div>
+            
+            <style>
+                .login-form-container,
+                .register-form-container,
+                .forgot-password-form-container {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.63);
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 999;
+                }
+            
+                .login-form,
+                .register-form,
+                .forgot-password-form {
+                    background: radial-gradient(circle at -1% 57.5%, rgb(0, 0, 0) 0%, rgb(32, 32, 32) 90%);
+                    padding: 3rem 2rem;
+                    width: 90%;
+                    max-width: 350px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                }
+            
+                .log-img {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            
+                .log-img img {
+                    width: 120px;
+                }
+            
+                input.log-input {
+                    border: 1px solid #535662 !important;
+                    outline: 0;
+                    padding: 12px;
+                    margin: 8px 0;
+                    background: #000000 !important;
+                    border-radius: 6px;
+                    font-size: 14px !important;
+                    color: #fff !important;
+                    font-weight: 400 !important;
+                }
+            
+                ::placeholder {
+                    color: rgba(167, 167, 167, 0.801);
+                    opacity: 1;
+                }
+            
+                .toggle-login-btn {
+                    background: transparent !important;
+                    margin: 12px 0px;
+                    border: 1px solid #e9c305 !important;
+                    padding: 10px 0px !important;
+                    border-radius: 6px;
+                    font-size: 12px !important;
+                    color: #e9c305 !important;
+                    font-weight: 500 !important;
+                    position: relative;
+                    top: -5px;
+                }
+            
+                button {
+                    margin: 6px 0;
+                    padding: 10px 0;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    outline: 0px;
+                    border: 0px;
+                }
+            
+                .login-btn, .register-btn, .forgot-password-btn {
+                    background: #e9c305 !important;
+                    color: #000000 !important;
+                    font-size: 15px;
+                }
+            
+                .forgot-password {
+                    color: #e9c305 !important;
+                    font-size: 15px !important;
+                    text-align: center;
+                }
+            
+                .back-to-login-btn {
+                    background: transparent !important;
+                    border: 1px solid #e9c305;
+                    color: #e9c305;
+                }
+            
+                .popup-message {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #1a1a1a;
+                    padding: 1rem 2rem;
+                    border-radius: 8px;
+                    color: white;
+                    font-weight: 400;
+                    display: none;
+                    font-size: 15px !important;
+                }
+            
+                .login-form-container.active,
+                .register-form-container.active,
+                .forgot-password-form-container.active {
+                    display: flex;
+                }
+            
+                .popup-message.show {
+                    display: block;
+                }
+            
+                .close-btn {
+                    position: absolute;
+                    top: -12px;
+                    right: 16px;
+                    background: transparent;
+                    border: none;
+                    font-size: 22px;
+                    color: white;
+                    cursor: pointer;
+                }
+                
+                .close-btn:hover {
+                    color: #e9c305;
+                }
+
+                p.forgot-password-instructions {
+                    color: #fff;
+                    font-size: 15px !important;
+                    font-weight: 400;
+                }
+            </style>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    function closePopup(popupSelector) {
+                        document.querySelector(popupSelector).classList.remove('active');
+                    }
+            
+                    document.querySelectorAll('.close-btn').forEach(button => {
+                        button.addEventListener('click', function (event) {
+                            const popupContainer = event.target.closest('.login-form-container, .register-form-container, .forgot-password-form-container');
+                            if (popupContainer) {
+                                popupContainer.classList.remove('active');
+                            }
+                        });
+                    });
+            
+                    document.querySelectorAll('[data-popup-trigger="login"]').forEach(button => {
+                        button.addEventListener('click', function () {
+                            document.querySelector('.login-form-container').classList.add('active');
+                        });
+                    });
+            
+                    document.querySelectorAll('[data-popup-trigger="register"]').forEach(button => {
+                        button.addEventListener('click', function () {
+                            document.querySelector('.register-form-container').classList.add('active');
+                        });
+                    });
+            
+                    document.querySelector('.toggle-login-btn').addEventListener('click', function () {
+                        closePopup('.register-form-container');
+                        document.querySelector('.login-form-container').classList.add('active');
+                    });
+            
+                    document.querySelector('.forgot-password').addEventListener('click', function () {
+                        closePopup('.login-form-container');
+                        document.querySelector('.forgot-password-form-container').classList.add('active');
+                    });
+            
+                    document.querySelector('.back-to-login-btn').addEventListener('click', function () {
+                        closePopup('.forgot-password-form-container');
+                        document.querySelector('.login-form-container').classList.add('active');
+                    });
+            
+                    function showPopupMessage(message) {
+                        const popup = document.querySelector('.popup-message');
+                        popup.textContent = message;
+                        popup.classList.add('show');
+                        setTimeout(() => {
+                            popup.classList.remove('show');
+                        }, 3000);
+                    }
+            
+                    document.querySelector('.login-btn').addEventListener('click', function () {
+                        closePopup('.login-form-container');
+                        showPopupMessage("Logged in successfully!");
+                    });
+            
+                    document.querySelector('.register-btn').addEventListener('click', function () {
+                        closePopup('.register-form-container');
+                        showPopupMessage("Registered successfully!");
+                    });
+            
+                    document.querySelector('.forgot-password-btn').addEventListener('click', function () {
+                        closePopup('.forgot-password-form-container');
+                        showPopupMessage("Password reset link has been sent to your email!");
+                    });
+                });
+            </script>
+        </div>
+        <div class="cookie-policy-container">
+            <div class="header-container">
+                <div class="title-wrapper">
+                    <div class="container s-title">
+                        <h1>Datenschutzerklärung</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container"> 
+            <div class="container">
+                <div class="sub-text">
+                    <h2>Datenschutz bei bwin</h2>
+                    <p>Der Schutz Ihrer Daten ist uns bei <strong>bwin</strong> ein wichtiges Anliegen. Diese Datenschutzerklärung beschreibt, wie wir Informationen sammeln, speichern und verwenden, um Ihre Privatsphäre zu gewährleisten.</p>
+                    
+                    <h2>Erhobene Daten</h2>
+                    <p>Wir erfassen und verarbeiten verschiedene Arten von Daten, darunter:</p>
+                    <ul>
+                        <li><strong>Persönliche Informationen:</strong> Name, E-Mail-Adresse, Telefonnummer und andere Kontaktdaten.</li>
+                        <li><strong>Technische Informationen:</strong> Geräteinformationen, IP-Adresse, Browsertyp und Betriebssystem.</li>
+                        <li><strong>Nutzungsdaten:</strong> Informationen zur Interaktion mit unserer Website, z. B. besuchte Seiten und durchgeführte Aktionen.</li>
+                    </ul>
+                    
+                    <h2>Verwendung der Daten</h2>
+                    <p>Ihre Daten werden verwendet, um:</p>
+                    <ul>
+                        <li>Unsere Services bereitzustellen und zu optimieren.</li>
+                        <li>Mit Ihnen zu kommunizieren, einschließlich Supportanfragen.</li>
+                        <li>Ihr Erlebnis auf unserer Website zu personalisieren.</li>
+                        <li>Rechtliche und regulatorische Anforderungen zu erfüllen.</li>
+                    </ul>
+                    
+                    <h2>Weitergabe von Daten</h2>
+                    <p>Wir teilen Ihre Informationen nur unter folgenden Bedingungen:</p>
+                    <ul>
+                        <li>Wenn es gesetzlich vorgeschrieben ist.</li>
+                        <li>Mit vertrauenswürdigen Partnern, die uns Dienstleistungen wie Hosting oder Analysen bereitstellen.</li>
+                        <li>Zum Schutz unserer Rechte und Interessen oder zur Verhinderung von Missbrauch.</li>
+                    </ul>
+                    
+                    <h2>Datensicherheit</h2>
+                    <p>Wir setzen modernste Sicherheitsmaßnahmen ein, um Ihre Daten vor unbefugtem Zugriff, Verlust und Missbrauch zu schützen.</p>
+                    
+                    <h2>Ihre Rechte</h2>
+                    <p>Sie haben das Recht auf:</p>
+                    <ul>
+                        <li>Zugriff auf Ihre gespeicherten persönlichen Daten.</li>
+                        <li>Berichtigung unrichtiger oder unvollständiger Informationen.</li>
+                        <li>Löschung Ihrer Daten unter bestimmten Bedingungen.</li>
+                        <li>Einschränkung oder Widerspruch gegen die Verarbeitung Ihrer Daten.</li>
+                    </ul>
+                    
+                    <h2>Änderungen</h2>
+                    <p>Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Änderungen werden auf dieser Seite veröffentlicht. Bitte überprüfen Sie diese Seite regelmäßig auf Updates.</p>
+                    
+                    <h2>Kontakt</h2>
+                    <p>Bei Fragen oder Anliegen zu dieser Datenschutzerklärung kontaktieren Sie uns bitte:</p>
+                    <ul>
+                        <li><strong>E-Mail:</strong> support@bwin.de</li>
+                        <li><strong>Website:</strong> <a href="https://promo.bwin.de/de/promo/offers/p/slots" target="_blank">https://promo.bwin.de/de/promo/offers/p/slots</a></li>
+                    </ul>
+                    <p>Wir freuen uns, Ihnen weiterzuhelfen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-links">
+                    <ul>
+                        <li>
+                            <a href="index.html">Startseite</a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html">Datenschutzerklärung</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">Allgemeine Geschäftsbedingungen</a>
+                        </li>
+                        <li>
+                            <a href="cookie-policy.html">Cookie-Richtlinie</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="footer-p-a">Diese Website wird betrieben von bwin (Deutschland) Limited - C92801 - Unit 6, St. Business Centre, 120 The Strand, Gzira, Malta.<br> 
+                    bwin (Deutschland) Limited ist lizenziert und wird von der Gemeinsamen Glücksspielbehörde der Länder (GGL) überwacht und reguliert.</p>
+            </div>
+            <div class="contact-social">
+                <ul>
+                    <li>
+                        <a><img src="images/no-under-eighteenbwin.jpg" alt="Avertissement général" class="f-2"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.gluecksspiel-behoerde.de/de/erlaubnisfaehigesgluecksspiel/whitelist"><img src="images/bwin-ggl-logo.webp" alt="Logo de l'ANJ (Autorité Nationale des Jeux)"  class="f-5"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.egba.eu/"><img src="images/bwin-egba-brand-logo-gambling.webp" alt="Logo de GamCare" class="f-1"></a>
+                    </li>
+                    <li>
+                        <a href="https://ibia.bet/"><img src="images/bwin-i-gam.webp" alt="Logo de BeGambleAware" class="f-4"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container text-center">
+                <p class="footer-copyright">
+                    © 2024 Bwin. All Rights Reserved
+                </p>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
